@@ -1,0 +1,24 @@
+<%@ taglib prefix="f" uri="http://java.sun.com/jsf/core" %>
+<%@ taglib prefix="h" uri="http://java.sun.com/jsf/html" %>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Registartion succesful</title>
+</head>
+<body>
+
+<h2>Registration Successful</h2>
+	 
+	    <P>
+	    <f:view>
+	    <h:form>
+	        <P>The following information has been saved succesfully<P/>
+	        <P>Name:         <h:outputText value = "#{UserBean.name}" /> <P/>
+	        <P>User Name:    <h:outputText value = "#{UserBean.userName}"/> <P/>
+	        <P>Birthday:     <h:outputText value = "#{UserBean.birthday}"/> <P/>
+	        <P>Phone Number: <h:outputText value = "#{UserBean.phoneNumber}"/> <P/>
+	    </h:form>
+	    </f:view>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<%@ taglib prefix="f" uri="http://java.sun.com/jsf/core" %>
+	<%@ taglib prefix="h" uri="http://java.sun.com/jsf/html" %>
+	 
+	<html>
+	 
+	    <head>
+	        <title>User Registration</title>
+	    </head>
+	 
+	    <body>
+	 
+	    <h1>User Registration</h1>
+	 
+	    <f:view>
+	        <h:form>
+	 
+	            <p>Enter your name:
+	            <h:inputText value="#{UserBean.name}"
+	            id="nameTextField" required="true"/>
+	            <h:message for="nameTextField"/>
+	 
+	            <p>Choose a username:
+	            <h:inputText
+	                value="#{UserBean.userName}"
+	                id="userNameTextField"
+	                required="true"/>
+	            <h:message for="userNameTextField" />
+	 
+	            <p>Enter the password:
+	            <h:inputSecret
+	                value="#{UserBean.password}"
+	                id="passwordTextField"
+	                required="true"/>
+	            <h:message for="passwordTextField" />
+	 
+	            <p>Enter your birthday:
+	            <h:inputText
+	                value="#{UserBean.birthday}"
+	                id="birthdayTextField"
+	                required="true">
+	            <f:convertDateTime pattern="MMM-dd-yyyy" />
+	            </h:inputText> (MMM-dd-yyyy)
+	            <h:message for="birthdayTextField" />
+	 
+	            <p>Enter your phone-number
+	            <h:inputText
+	                value="#{UserBean.phoneNumber}"
+	                id="phoneNumberTextField"
+	                required="true">
+	            <f:validator validatorId="PhoneNumberValidator" />
+	            </h:inputText>
+	            <h:message for="phoneNumberTextField"/>
+	 
+	            <h:commandButton value="Submit Values" action="success"/>
+	 
+	        </h:form>
+	    </f:view>
+	 
+	    </body>
+	</html>
